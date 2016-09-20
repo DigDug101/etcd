@@ -11,3 +11,10 @@
 *.test
 tools/functional-tester/docker/bin
 hack/tls-setup/certs
+
+*.deb
+debian/*.debhelper
+debian/*.substvars
+debian/*.debhelper.log
+debian/files
+debian/etcd

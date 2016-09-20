@@ -1,0 +1,13 @@
+Source: etcd
+Maintainer: Greg Taylor <greg.taylor@reddit.com>
+Section: devel
+Priority: optional
+Build-Depends: debhelper (>= 7.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/reddit/etcd
+Vcs-Git: git://github.com/reddit/etcd.git
+
+Package: etcd
+Architecture: amd64
+Depends: ${misc:Depends}
+Description: A highly-available key value store.

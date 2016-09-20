@@ -1,0 +1,6 @@
+build:
+  image: quay.io/reddit/go-debpkger:ubuntu-14.04_go-1.6.3
+  commands:
+    - ./build
+    - ./debian/rules binary
+    - aws s3 cp etcd_*_*.deb s3://reddit-packages/any/amd64/

@@ -1,0 +1,6 @@
+etcd (2.3.7) trusty; urgency=low
+
+  * initial packaging.
+
+ -- Greg Taylor <greg.taylor@reddit.com>  Tue, 20 Sep 2016 18:13:33 -0700
+

@@ -1,0 +1,18 @@
+description "distributed key-value store"
+
+start on networking
+stop on runlevel [016]
+
+respawn
+respawn limit 10 5
+
+setuid etcd
+
+script
+    ETCD_OPTIONS=
+    if [ -f "/etc/default/etcd" ]; then
+        . /etc/default/etcd
+    fi
+
+exec /usr/bin/etcd $ETCD_OPTIONS
+end script
