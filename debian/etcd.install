@@ -1,1 +1,2 @@
 debian/etcd.conf /etc/etcd
+debian/etcd.default /etc/default/etcd

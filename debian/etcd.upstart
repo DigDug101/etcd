@@ -1,11 +1,18 @@
-description "daemon to report back hot memcached keys in a graphite-friendly format"
+description "distributed key-value store"
 
 start on networking
-stop on runlevel [!2345]
+stop on runlevel [016]
 
 respawn
 respawn limit 10 5
 
 setuid Debian-etcd
 
-exec /usr/bin/etcd -c /etc/etcd/etcd.conf
+script
+    ETCD_OPTIONS=
+    if [ -f "/etc/default/etcd" ]; then
+        . /etc/default/etcd
+    fi
+
+exec /usr/bin/etcd $ETCD_OPTIONS >>/var/log/etcd.log 2>&1
+end script
