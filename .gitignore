@@ -10,3 +10,10 @@
 /hack/insta-discovery/.env
 *.test
 tools/functional-tester/docker/bin
+
+*.deb
+debian/*.debhelper
+debian/*.substvars
+debian/*.debhelper.log
+debian/files
+debian/etcd
