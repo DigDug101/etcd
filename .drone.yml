@@ -8,5 +8,5 @@ publish:
   s3:
     region: "us-east-1"
     bucket: "reddit-packages"
-    source: etcd_*_*.deb
-    target: /any/amd64/
+    source: etcd_2.3.7_amd64.deb
+    target: /any/amd64/etcd_2.3.7_amd64.deb
