@@ -6,7 +6,8 @@ build:
 
 publish:
   s3:
+    acl: private
     region: "us-east-1"
-    bucket: "reddit-packages"
+    bucket: "reddit-packages.s3-website-us-east-1.amazonaws.com"
     source: etcd_2.3.7_amd64.deb
     target: /any/amd64/etcd_2.3.7_amd64.deb
