@@ -1,2 +1,3 @@
 debian/etcd.conf /etc/etcd
+debian/etcd.upstart /etc/init.d/etcd
 debian/etcd.default /etc/default/etcd
