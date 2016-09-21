@@ -3,11 +3,4 @@ build:
   commands:
     - ./build
     - ./debian/rules binary
-
-publish:
-  s3_sync:
-    acl: private
-    region: "us-east-1"
-    bucket: "reddit-packages.s3-website-us-east-1.amazonaws.com"
-    source: etcd_2.3.7_amd64.deb
-    target: /any/amd64/etcd_2.3.7_amd64.deb
+    - aws s3 cp etcd_*_*.deb s3://reddit-packages/any/amd64/
