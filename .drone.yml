@@ -5,7 +5,7 @@ build:
     - ./debian/rules binary
 
 publish:
-  s3:
+  s3_sync:
     acl: private
     region: "us-east-1"
     bucket: "reddit-packages.s3-website-us-east-1.amazonaws.com"
